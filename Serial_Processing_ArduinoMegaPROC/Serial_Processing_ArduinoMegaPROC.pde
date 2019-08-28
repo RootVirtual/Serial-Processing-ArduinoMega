@@ -2,6 +2,11 @@
 //ENVÍA UNA b CUANDO SE PASA EL RATÓN POR EL CUADRADO
 //Y ENVÍA UNA a CUANDO SE APARTA EL RATÓN DEL CUADRADO
 
+//  ¡¡PARA COMUNICAR CON ARDUINO MEGA, ES NECESARIO UN delay de 5 seg cuando conecta!!
+//                myPort = new Serial(this, portName, 9600);
+//                delay(5000);
+
+
 import processing.serial.*;
 
 Serial myPort;
@@ -13,6 +18,7 @@ void setup()
 
   String portName = Serial.list()[1];
   myPort = new Serial(this, portName, 9600);
+  delay(5000);
 }
 
 void draw() {
